@@ -5,7 +5,6 @@ if($_SESSION['username'] == ""){
 }
 
 	require('../classes/_ram.php'); 
-	require('../classes/_pitemp.php'); 
 	require('../classes/_hdd.php'); 
 	require('../classes/_cpu.php'); 
 	require('../classes/_uptime.php'); 
@@ -31,10 +30,6 @@ if($_SESSION['username'] == ""){
         	<div class="clear"></div>
 		<br/>
 		<br/>
-        	<?php $heat = new heatPercentage; $heatpercent = $heat->getCurrentTemp(); ?>
-        	<div class="clear"></div>
-        	
-        	<br/><br/>
 
         	<?php $hdd = new hddPercentage; $storagepercentage = $hdd->freeStorage();?>
         	

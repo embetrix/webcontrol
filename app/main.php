@@ -8,7 +8,6 @@ if($_SESSION['username'] == "")
 }
 
 require('_lib/classes/_ram.php'); 
-require('_lib/classes/_pitemp.php'); 
 require('_lib/classes/_hdd.php'); 
 require('_lib/classes/_cpu.php'); 
 require('_lib/classes/_uptime.php'); 
@@ -42,11 +41,6 @@ $ram = new ramPercentage; $percentage = $ram->freeMemory(); $percentage = $ram->
     <div class="clear"></div>
     <br/><br/>
 <?php
-$heat = new heatPercentage; $heatpercent = $heat->getCurrentTemp();
-?>
-    <div class="clear"></div>
-    <br/><br/>
-<?php
 $hdd = new hddPercentage; $storagepercentage = $hdd->freeStorage();
 ?>
     <div class="clear"></div>
@@ -75,7 +69,7 @@ require('_lib/includes/_footer.php');
 <!--
 function rebootWarn()
 {
-    var answer = confirm("WARNING:\nThis will make your Raspberry Pi temporarily unavailable.\nIt may also connect back to the network with a different IP.")
+    var answer = confirm("WARNING:\nThis will make your device temporarily unavailable.\nIt may also connect back to the network with a different IP.")
     if (answer)
     {
         alert("Rebooting...")

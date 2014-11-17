@@ -79,34 +79,6 @@
 			  }
 	          ?>
 		
-		
-				<div class="swapIcon">
-					<img src="_lib/images/swap.png" align="middle">
-				</div>
-				
-				<div class="swapTitle">
-					 Swap
-				</div>
-				
-				<div class="swapWarning">
-					<?php echo $warning; ?>
-				</div>
-				
-				<div class="swapText">
-					<div class="graph">
-						<strong class="<?php echo $bar; ?>" style="width:<?php echo $percentage; ?>%;"><?php echo $percentage; ?>%</strong>
-					</div> 
-					
-					<div class="clear"></div>
-					
-					<br/>
-					
-					Free: <strong><?php echo ($free); ?> MB</strong> Used: <strong><?php echo ($used); ?> MB</strong> &middot Total: <strong><?php echo $total; ?> MB</strong>
-					
-				</div>
-				
-				
-				<div class="clear"></div>
 				
 <?php
 		}

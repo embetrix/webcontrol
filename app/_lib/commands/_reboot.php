@@ -4,7 +4,7 @@ session_start();
 if($_SESSION['username'] == ""){
 	die("You are not logged in");
 }
-	system('sudo /sbin/reboot');
+	system('/sbin/reboot');
 ?>
 	
-	<center> Your Raspberry Pi is now rebooting! </center>
+	<center> Your device is now rebooting! </center>

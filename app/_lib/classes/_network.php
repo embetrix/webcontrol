@@ -25,7 +25,7 @@ class network
         $tx = round($txRaw, 2);
         $totalRxTx = $rx + $tx;
 
-        $iTotalConnections = shell_exec("netstat -nta --inet | wc -l");
+        $iTotalConnections = shell_exec("netstat -nta | wc -l");
         $iTotalConnections--;
 
         if ($statsOnly)

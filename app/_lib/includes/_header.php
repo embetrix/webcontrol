@@ -127,7 +127,7 @@ else
           <a href="#">Home</a>
             <ul>
               <li><a href="index.php">Reload page</a></li>
-              <li><a href="" onclick="return rebootWarn()">Reboot Raspberry Pi</a></li>
+              <li><a href="" onclick="return rebootWarn()">Reboot</a></li>
             </ul>
         </li>
         <li>

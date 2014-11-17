@@ -1,7 +1,7 @@
 <?php
 	class hddPercentage {
 		function freeStorage($statsOnly = 0){
-			exec('df -hT | grep -vE "tmpfs|rootfs|Filesystem"', $drivesarray);
+			exec('df -h | grep -vE "tmpfs|root|Filesystem"', $drivesarray);
 			if (!$statsOnly) {
 			?>
 				<div class="sdIcon">
@@ -22,7 +22,7 @@
 			{
 				$drivesarray[$drive] = preg_replace('!\s+!', ' ', $drivesarray[$drive]);
 				preg_match_all('/\S+/', $drivesarray[$drive], $drivedetails);
-				list($fs, $type, $size, $used, $available, $percentage, $mounted) = $drivedetails[0];
+				list($fs, $size, $used, $available, $percentage, $mounted) = $drivedetails[0];
 				
 				if ($statsOnly) {
 					echo '{
@@ -52,7 +52,7 @@
 			
 			
 				<div class="sdName">
-					<?php echo $mounted?>
+					<strong><?php echo $mounted?></strong>
 				</div>
 					
 				<div class="sdWarning">
