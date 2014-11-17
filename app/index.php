@@ -1,6 +1,6 @@
 <?php
 
-$passwdfile = '/etc/rpiweb/passwd';
+$passwdfile = '/etc/webcontrol/passwd';
 
 if (file_exists($passwdfile))
 {
@@ -20,7 +20,7 @@ if (file_exists($passwdfile))
        <div class="firstBlockWrapper">
          <div style="padding-top: 40px;">
            <center>
-Please login to RPiWeb<br/><br/>
+Please login<br/><br/>
             <form name="login" method="post" action="index.php">
                <input type="text" name="username" class="loginForm" placeholder="Username" autofocus />
                <input type="password" name="password" class="loginForm" placeholder="Password" /><br/>
@@ -48,17 +48,17 @@ else
         <div id="firstBlockContainer">
           <div class="firstBlockWrapper">
             <div style="padding-top: 20px;">
-The file /etc/rpiweb/passwd does not exist, so please open a terminal session as root and run the commands below:<br/>
+The file /etc/webcontrol/passwd does not exist, so please open a terminal session as root and run the commands below:<br/>
 <br/>
-mkdir -p /etc/rpiweb<br/>
-touch /etc/rpiweb/passwd<br/>
-chown root.lighttpd /etc/rpiweb/passwd<br/>
-chmod 640 /etc/rpiweb/passwd<br/>
-mcedit /etc/rpiweb/passwd<br/>
+mkdir -p /etc/webcontrol<br/>
+touch /etc/webcontrol/passwd<br/>
+chown root.lighttpd /etc/webcontrol/passwd<br/>
+chmod 640 /etc/webcontrol/passwd<br/>
+mcedit /etc/webcontrol/passwd<br/>
 <br/>
 Once you are in the editor, add the lines below and press the keys "CTRL+X", "Y" and "ENTER"<br/>
 {<br/>
-<p style="text-indent: 2em;">"user":"rpiweb",<br/></p>
+<p style="text-indent: 2em;">"user":"webcontrol",<br/></p>
 <p style="text-indent: 2em;">"password":"choose-a-password"<br/></p>
 }<br/>
             </div>

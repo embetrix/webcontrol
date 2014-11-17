@@ -15,7 +15,7 @@ else
 
 <html>
 <head>
-  <title>RPiWeb - The Raspberry Pi Control Center for openmamba</title>
+  <title>WebControl</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="_lib/styles/style.css" type="text/css" media="screen" charset="utf-8">
   <link rel="stylesheet" href="_lib/styles/menu.css" type="text/css" media="screen" charset="utf-8">
@@ -25,8 +25,8 @@ else
   <div id="topContainer">
     <div class="topWrapper">
       <div style="float: left;">
-        <h1><img src="_lib/images/smallLogo.png" style="float: left; margin-top: -15px;"> RPiWeb</h1>
-        <h2>The Raspberry Pi Control Center for openmamba</h2>
+        <h1><img src="_lib/images/smallLogo.png" style="float: left; margin-top: -15px;"> WebControl</h1>
+        <h2>WebControl</h2>
       </div>
 <?php
 if( $_Username == "")
@@ -133,7 +133,7 @@ else
         <li>
           <a href="#">System</a>
           <ul>
-            <li><a href="_lib/commands/_updaterpi.php">Install updates</a></li>
+            <li><a href="_lib/commands/_updater.php">Install updates</a></li>
             <li>
 <?php
     if (file_exists ("/etc/sysconfig/network-scripts/ifcfg-wireless"))

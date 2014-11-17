@@ -1,6 +1,6 @@
 <?php session_start(); 
 if(isset($_POST['login'])){
-	$handle = file_get_contents("/etc/rpiweb/passwd");
+	$handle = file_get_contents("/etc/webcontrol/passwd");
 	$db = json_decode($handle);
 	$username = $db->{'user'};
 	$password = $db->{'password'};

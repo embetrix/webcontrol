@@ -138,7 +138,7 @@ if(isset($_POST['configure_wireless']))
          $_POST["ssid"] != "none_detected" && $_POST['secret'] != "") ||
         ($_POST['encryption'] == 'none' && $_POST["ssid"] != "none_detected"))
     {
-        system('sudo /usr/sbin/config-rpi-wireless' .
+        system('/usr/sbin/config-wireless' .
                ' --force --check-result --interface-alias=wireless' .
                ' --encryption="' . $_POST['encryption'] . '"' .
                ' --ssid="' . $_POST["ssid"] . '"' .

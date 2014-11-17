@@ -19,13 +19,13 @@ echo '</pre>';
 if ($retval == 0)
 {
 ?>
-The RPi has been succefully updated!<br/>
+The device has been succefully updated!<br/>
 <?php
 }
 else
 {
 ?>
-<font color='red'>The RPi update failed!</font><br/>
+<font color='red'>Update failed!</font><br/>
 <?php
 }
 ?>

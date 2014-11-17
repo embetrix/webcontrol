@@ -12,12 +12,12 @@
 			}
 			?>
 			<br/><br/>
-            Powered by <a href="http://www.openmamba.org" target="_blank">openmamba</a>
+            Powered by <a href="http://www.embexus.com" target="_blank">embexus</a>
             
             <?php
             
             if($_Username == ""){}else{
-                    echo '<br/><br/><a href="_lib/classes/_logout.php">Logout of RPiWeb</a><br/><br/>';
+                    echo '<br/><br/><a href="_lib/classes/_logout.php">Logout</a><br/><br/>';
 				
             }
             ?>

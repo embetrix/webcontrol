@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-// PiControl API
+// Control API
 
-$handle = file_get_contents("/etc/rpiweb/passwd");
+$handle = file_get_contents("/etc/webcontrol/passwd");
 $db = json_decode($handle);
 $username = $db->{'user'};
 $password = $db->{'password'};
@@ -14,7 +14,7 @@ if($_GET['username'] == $username && $_GET['password'] == $password)
 
     if($_GET['action'] == 'reboot')
     {
-        system('sudo /sbin/reboot');
+        system('/sbin/reboot');
     }
 
     if($_GET['action'] == 'stats')

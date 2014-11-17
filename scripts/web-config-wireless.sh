@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# config-rpi-wireless: Configure the wireless interface (requires NetworkManager)
+# config-wireless: Configure the wireless interface (requires NetworkManager)
 # Copyright (C) 2013 Davide Madrisan <davide,madrisan@fr.ibm,com>
 
-progname="config-rpi-wireless"
+progname="config-wireless"
 progver="4"
 
 function copying() {
