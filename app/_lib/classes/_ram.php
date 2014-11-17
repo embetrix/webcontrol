@@ -1,7 +1,7 @@
 <?php
 	class ramPercentage {
 		function freeMemory($statsOnly = 0){
-		    exec('free -mo', $out);
+		    exec('free', $out);
 		    preg_match_all('/\s+([0-9]+)/', $out[1], $matches);
 		    list($total, $used, $free, $shared, $buffers, $cached) = $matches[1];
 
@@ -47,7 +47,7 @@
 					
 					<br/>
 					
-					Free: <strong><?php echo $free + $buffers + $cached; ?> MB</strong> Used: <strong><?php echo $used - $buffers - $cached; ?> MB</strong> &middot Total: <strong><?php echo $total; ?> MB</strong><br/></div>
+					Free: <strong><?php echo round(($free + $buffers + $cached)/1024); ?> MB</strong> Used: <strong><?php echo round(($used - $buffers - $cached)/1024); ?> MB</strong> &middot Total: <strong><?php echo round($total/1024); ?> MB</strong><br/></div>
 				
 				
 				<div class="clear"></div>
