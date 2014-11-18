@@ -8,8 +8,8 @@ if($_SESSION['username'] == "")
 
 echo '<pre>';
 
-system('sudo /usr/bin/smart update', $retval);
-$last_line = system('sudo /usr/bin/smart --quiet upgrade --yes', $retval);
+system('/usr/bin/smart update', $retval);
+$last_line = system('/usr/bin/smart --quiet upgrade --yes', $retval);
 
 // Printing additional info
 echo '</pre>';

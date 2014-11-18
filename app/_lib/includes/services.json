@@ -1,9 +1,5 @@
 {
 	"show network configuration": "/sbin/ip -family inet addr; echo; /bin/netstat -nr", 
-	"show running processes": "sudo /bin/netstat -laputn || /bin/netstat -lautn",
-	"start syslog service": "sudo /sbin/service syslog-ng start",
-	"stop syslog service": "sudo /sbin/service syslog-ng stop",
-	"show last messages": "/usr/bin/tail --lines=80 /var/log/messages",
-	"powering off display": "sudo /opt/vc/bin/tvservice -o",
-	"powering on display": "sudo /opt/vc/bin/tvservice -p"
+	"show running processes": "/bin/ps",
+	"show last messages": "/sbin/logread | tail -n 100"
 }

@@ -99,7 +99,7 @@ p, h1, form, button{border:0; margin:0; padding:0;}
 </label>
 <select name="ssid">
 <?php
-exec('sudo /usr/sbin/iwlist wlan0 scanning | \
+exec('/sbin/iwlist wlan0 scanning | \
         sed -n "/ESSID:/{s,.*ESSID:\"\(.*\)\",\1,p}"',
     $essid_list, $retval);
 if (empty($essid_list))

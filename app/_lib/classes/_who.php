@@ -53,9 +53,6 @@ class usersLoggedIn{
 							continue;
 						}
 						$s .= "<div style='float: left; padding-bottom: 30px; padding-right: 20px;'><strong>User:</strong> " . $fields[0] . "<br />";
-						$s .= "<strong>IP From:</strong> " . $fields[5] . "<br />";
-						$s .= "<strong>Since:</strong> " . $fields[4] . "</div>";
-
 						$s .= "";
 					}
 				}
