@@ -26,7 +26,6 @@ else
     <div class="topWrapper">
       <div style="float: left;">
         <h1><img src="_lib/images/smallLogo.png" style="float: left; margin-top: -15px;"> WebControl</h1>
-        <h2>WebControl</h2>
       </div>
 <?php
 if( $_Username == "")
@@ -79,33 +78,6 @@ else
         $warranty = '<span class="warranty_valid">Valid</span>';
     }
 ?>
-
-      <div style="text-align: right; padding-top: 4px; color: #FFFFFF; font-family: Arial; font-size: 13px; float: right; width:500px;line-height: 14px;">
-        <strong>Hostname:</strong> <?php echo gethostname(); ?> &middot; 
-        <strong>Internal IP:</strong> <?php echo $_SERVER['SERVER_ADDR']; ?><br/>
-        <strong>Accessed From:</strong> <?php echo $_SERVER['SERVER_NAME']; ?> &middot; 
-        <strong>Port:</strong> <?php echo $_SERVER['SERVER_PORT']; ?> &middot; 
-        <strong>HTTP:</strong> <?php echo $_SERVER['SERVER_SOFTWARE']; ?><br/>
-<?php
-    echo "<strong>Distribution:</strong> ".$distroTypeRawEnd;
-?>
-<br/>
-<?php
-    echo "<strong>Kernel:</strong> ".$kernel;
-?>
-<br/>
-<?php
-    echo "<strong>Firmware:</strong> ".$firmware;
-?>
-<br/>
-<?php
-    echo "<strong>Revision:</strong> ".$revision;
-?>
-</br>
-<?php
-    echo "<strong>Serial Number:</strong> ".$serialnumber." - <strong>Warranty:</strong> ".$warranty;
-?>
-      </div>
 <?php
 }
 ?>
