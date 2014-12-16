@@ -119,7 +119,7 @@ else
 </label>
 <select name="encryption">
   <option value="wep">WEP</option>
-  <option selected="selected" value="wpa">WPA/WPA2</option>
+  <option selected="selected" value="wpa2-psk">WPA/WPA2</option>
   <option value="none">None</option>
 </select>
 
@@ -139,10 +139,9 @@ if(isset($_POST['configure_wireless']))
         ($_POST['encryption'] == 'none' && $_POST["ssid"] != "none_detected"))
     {
         system('/usr/sbin/config-wireless' .
-               ' --force --check-result --interface-alias=wireless' .
-               ' --encryption="' . $_POST['encryption'] . '"' .
-               ' --ssid="' . $_POST["ssid"] . '"' .
-               ' --secret="' . $_POST['secret'] . '"', $retval);
+               ' "' . $_POST["ssid"] . '"' .
+               ' "' . $_POST['encryption'] . '"' .
+               ' "' . $_POST['secret'] . '"', $retval);
         if ($retval == 0)
         {
             echo "<font color='black'>OK</font>";
