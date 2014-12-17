@@ -106,22 +106,8 @@ else
           <a href="#">System</a>
           <ul>
             <li><a href="_lib/commands/_updater.php">Install updates</a></li>
-            <li>
-<?php
-    if (file_exists ("/etc/sysconfig/network-scripts/ifcfg-wireless"))
-    {
-?>
-              <a href="_lib/commands/_configurewifi.php">Reconfigure Wireless</a>
-<?php
-    }
-    else
-    {
-?>
-              <a href="_lib/commands/_configurewifi.php">Configure Wireless</a>
-<?php
-    }
-?>
-            </li>
+            <li><a href="_lib/commands/_configurewifi.php">Configure Wireless</a></li>
+            <li><a href="_lib/commands/_configurevpn.php">Configure VPN</a></li>    
           </ul>
         </li>
         <li>

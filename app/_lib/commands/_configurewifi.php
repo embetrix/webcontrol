@@ -119,7 +119,7 @@ else
 </label>
 <select name="encryption">
   <option value="wep">WEP</option>
-  <option selected="selected" value="wpa2-psk">WPA/WPA2</option>
+  <option selected="selected" value="wpa2">WPA/WPA2</option>
   <option value="none">None</option>
 </select>
 
