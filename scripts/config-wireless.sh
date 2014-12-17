@@ -6,4 +6,6 @@ sed -i "s/Name = .*/Name = $1/g" $WIFI_CONFIG
 sed -i "s/Security = .*/Security = $2/g" $WIFI_CONFIG
 sed -i "s/Passphrase = .*/Passphrase = $3/g" $WIFI_CONFIG
 
+systemctl restart connman
+
 exit 0
