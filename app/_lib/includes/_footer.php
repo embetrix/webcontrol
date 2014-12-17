@@ -1,5 +1,6 @@
 <div id="footerContainer">
         <div class="footerWrapper">
+			<br/><br/>
 			<?php
 			if($_Username == ""){}else{
 				echo 'Poll timer: <select onchange="poll.adjustDelay(this.value);">
